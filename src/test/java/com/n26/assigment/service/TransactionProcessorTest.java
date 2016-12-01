@@ -22,7 +22,6 @@ public class TransactionProcessorTest {
 		
 		Transaction transaction = new Transaction(1000, System.currentTimeMillis());
 		transactionProcessor.addTransaction(transaction);
-		sleep(500l);
 		verify(statsProcessorMock, times(1)).processTransaction(transaction);
 	}
 	
